@@ -1,0 +1,278 @@
+[
+    {
+        "id": "app001",
+        "name": "Programming Hero",
+        "developer": "Programming Hero Ltd.",
+        "thumbnail": "https://i.ibb.co.com/1JZw6bPk/thumbnail.png",
+        "banner": "https://i.ibb.co.com/1JZw6bPk/thumbnail.png",
+        "downloads": 3500000,
+        "category": "Education",
+        "rating": 4.8,
+        "description": "Programming Hero is a fun and interactive way to learn programming with real-world projects.",
+        "features": [
+            "Interactive coding lessons",
+            "Real-world projects",
+            "Gamified learning experience"
+        ],
+        "reviews": [
+            {
+                "user": "coder_nadia",
+                "rating": 5,
+                "comment": "Best app for beginners!"
+            }
+        ]
+    },
+    {
+        "id": "app002",
+        "name": "Duolingo",
+        "developer": "Duolingo Inc.",
+        "thumbnail": "https://i.ibb.co.com/PZ5dSKQy/duolingo.jpg",
+        "banner": "https://i.ibb.co.com/PZ5dSKQy/duolingo.jpg",
+        "downloads": 500000000,
+        "category": "Education",
+        "rating": 4.7,
+        "description": "Duolingo makes learning languages fun, free, and effective.",
+        "features": [
+            "Multiple languages",
+            "Daily practice",
+            "Gamified lessons"
+        ],
+        "reviews": [
+            {
+                "user": "language_lover",
+                "rating": 5,
+                "comment": "Learning languages feels like playing a game!"
+            }
+        ]
+    },
+    {
+        "id": "app003",
+        "name": "Sikho Academy",
+        "developer": "Sikho Academy",
+        "thumbnail": "https://i.ibb.co.com/gMmZctmT/seekho-us-banner-website.png",
+        "banner": "https://i.ibb.co.com/gMmZctmT/seekho-us-banner-website.png",
+        "downloads": 120000000,
+        "category": "Education",
+        "rating": 4.9,
+        "description": "Free world-class education for anyone, anywhere.",
+        "features": [
+            "Video tutorials",
+            "Practice exercises",
+            "Progress tracking"
+        ],
+        "reviews": [
+            {
+                "user": "student123",
+                "rating": 5,
+                "comment": "Saved my exam preparation!"
+            }
+        ]
+    },
+    {
+        "id": "app004",
+        "name": "Notion",
+        "developer": "Notion Labs Inc.",
+        "thumbnail": "https://i.ibb.co.com/7JqsYTyv/BCG-Notion-Banner.png",
+        "banner": "https://i.ibb.co.com/7JqsYTyv/BCG-Notion-Banner.png",
+        "downloads": 30000000,
+        "category": "Productivity",
+        "rating": 4.6,
+        "description": "Notion is an all-in-one workspace for notes, tasks, and projects.",
+        "features": [
+            "Custom templates",
+            "Task management",
+            "Team collaboration"
+        ],
+        "reviews": [
+            {
+                "user": "productivity_guy",
+                "rating": 5,
+                "comment": "My entire life is organized here."
+            }
+        ]
+    },
+    {
+        "id": "app005",
+        "name": "Todoist",
+        "developer": "Doist",
+        "thumbnail": "https://i.ibb.co/1X8YQyP/todoist-thumb.jpg",
+        "banner": "https://i.ibb.co.com/LDJ1BC6m/todoist.jpg",
+        "downloads": 25000000,
+        "category": "Productivity",
+        "rating": 4.7,
+        "description": "Todoist helps you organize tasks and get things done.",
+        "features": [
+            "Task scheduling",
+            "Priority levels",
+            "Cross-device sync"
+        ],
+        "reviews": [
+            {
+                "user": "busy_dev",
+                "rating": 5,
+                "comment": "Simple and powerful task manager."
+            }
+        ]
+    },
+    {
+        "id": "app006",
+        "name": "Google Keep",
+        "developer": "Google LLC",
+        "thumbnail": "https://i.ibb.co.com/q3QcSJnz/keep-notes.jpg",
+        "banner": "https://i.ibb.co.com/q3QcSJnz/keep-notes.jpg",
+        "downloads": 1000000000,
+        "category": "Productivity",
+        "rating": 4.5,
+        "description": "Quickly capture notes, lists, and reminders.",
+        "features": [
+            "Voice notes",
+            "Color-coded notes",
+            "Cloud sync"
+        ],
+        "reviews": [
+            {
+                "user": "note_taker",
+                "rating": 4,
+                "comment": "Fast and easy note-taking."
+            }
+        ]
+    },
+    {
+        "id": "app007",
+        "name": "PUBG Mobile",
+        "developer": "Tencent Games",
+        "thumbnail": "https://i.ibb.co.com/DDhRXz88/Pubg-mobile.jpg",
+        "banner": "https://i.ibb.co.com/DDhRXz88/Pubg-mobile.jpg",
+        "downloads": 1000000000,
+        "category": "Gaming",
+        "rating": 4.3,
+        "description": "Battle royale shooter with intense multiplayer action.",
+        "features": [
+            "Multiplayer battles",
+            "High-quality graphics",
+            "Regular updates"
+        ],
+        "reviews": [
+            {
+                "user": "gamer_pro",
+                "rating": 5,
+                "comment": "Still the best battle royale!"
+            }
+        ]
+    },
+    {
+        "id": "app008",
+        "name": "Call of Duty Mobile",
+        "developer": "Activision",
+        "thumbnail": "https://i.ibb.co.com/Xx5W2ZPD/call-of-duty.jpg",
+        "banner": "https://i.ibb.co.com/Xx5W2ZPD/call-of-duty.jpg",
+        "downloads": 500000000,
+        "category": "Gaming",
+        "rating": 4.6,
+        "description": "Fast-paced FPS action on mobile.",
+        "features": [
+            "Multiplayer modes",
+            "Zombies mode",
+            "Competitive ranking"
+        ],
+        "reviews": [
+            {
+                "user": "fps_fan",
+                "rating": 5,
+                "comment": "Console-level experience!"
+            }
+        ]
+    },
+    {
+        "id": "app009",
+        "name": "Clash of Clans",
+        "developer": "Supercell",
+        "thumbnail": "https://i.ibb.co.com/kVXzHcFr/coc.jpg",
+        "banner": "https://i.ibb.co.com/kVXzHcFr/coc.jpg",
+        "downloads": 500000000,
+        "category": "Gaming",
+        "rating": 4.5,
+        "description": "Build your village and battle other players.",
+        "features": [
+            "Clan wars",
+            "Village building",
+            "Strategic gameplay"
+        ],
+        "reviews": [
+            {
+                "user": "clan_leader",
+                "rating": 5,
+                "comment": "Classic and addictive!"
+            }
+        ]
+    },
+    {
+        "id": "app010",
+        "name": "Forest",
+        "developer": "Seekrtech",
+        "thumbnail": "https://i.ibb.co.com/rKjdXBLW/forests.jpg",
+        "banner": "https://i.ibb.co.com/rKjdXBLW/forests.jpg",
+        "downloads": 15000000,
+        "category": "Productivity",
+        "rating": 4.8,
+        "description": "Stay focused and build healthy productivity habits.",
+        "features": [
+            "Focus timer",
+            "Tree planting",
+            "Statistics tracking"
+        ],
+        "reviews": [
+            {
+                "user": "deep_focus",
+                "rating": 5,
+                "comment": "Helped me stop phone addiction."
+            }
+        ]
+    },
+    {
+        "id": "app011",
+        "name": "SoloLearn",
+        "developer": "SoloLearn Inc.",
+        "thumbnail": "https://i.ibb.co.com/rf5DDxSn/solo-learn.jpg",
+        "banner": "https://i.ibb.co.com/rf5DDxSn/solo-learn.jpg",
+        "downloads": 45000000,
+        "category": "Education",
+        "rating": 4.6,
+        "description": "Learn programming languages interactively.",
+        "features": [
+            "Multiple languages",
+            "Code playground",
+            "Community support"
+        ],
+        "reviews": [
+            {
+                "user": "js_beginner",
+                "rating": 5,
+                "comment": "Great for learning JavaScript!"
+            }
+        ]
+    },
+    {
+        "id": "app012",
+        "name": "Chess.com",
+        "developer": "Chess.com LLC",
+        "thumbnail": "https://i.ibb.co.com/7Npn39RK/chess.jpg",
+        "banner": "https://i.ibb.co.com/7Npn39RK/chess.jpg",
+        "downloads": 100000000,
+        "category": "Gaming",
+        "rating": 4.9,
+        "description": "Play chess online with millions of players.",
+        "features": [
+            "Online multiplayer",
+            "Puzzles",
+            "AI practice"
+        ],
+        "reviews": [
+            {
+                "user": "chess_master",
+                "rating": 5,
+                "comment": "Best chess app ever."
+            }
+        ]
+    }
+]
