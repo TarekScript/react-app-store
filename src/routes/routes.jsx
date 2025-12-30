@@ -1,6 +1,8 @@
 import { createBrowserRouter } from "react-router";
 import AppDetails from "../components/appDetails/AppDetails";
 import Home from "../components/home/Home";
+import Login from "../components/loginPage/Login";
+import Register from "../components/registerPage/Register";
 import RootPage from "../layout/RootPage";
 import ErrorPage from "../pageses/ErrorPage";
 import Loader from "../pageses/Loader";
@@ -22,6 +24,14 @@ const router = createBrowserRouter([
                 path: '/appdetails/:id',
                 Component: AppDetails,
                 hydrateFallbackElement: <Loader></Loader>
+            },
+            {
+                path: '/login',
+                Component: Login
+            },
+            {
+                path: '/register',
+                Component: Register
             }
         ]
     },

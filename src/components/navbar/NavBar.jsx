@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router';
+import { Link, NavLink } from 'react-router';
 import './navBar.css';
 import logo from '../../assets/app-store_888840.png'
 
@@ -32,7 +32,7 @@ const NavBar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn">Button</a>
+                <Link to='/login' className="btn">Login</Link>
             </div>
         </div>
     );
