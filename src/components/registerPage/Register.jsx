@@ -1,9 +1,10 @@
 import React, { use } from 'react';
-import { Link } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 import { AuthContext } from '../../provider/ContextProvider';
 
 const Register = () => {
-    const { registerUser, updateUserProfile, loginWithGoogle } = use(AuthContext)
+    const { registerUser, updateUserProfile, loginWithGoogle } = use(AuthContext);
+    const navigate = useNavigate();
     const handleRegister = (e) => {
         e.preventDefault();
         const name = e.target.name.value;
@@ -17,13 +18,13 @@ const Register = () => {
         registerUser(email, password)
             .then(result => {
                 updateUserProfile(updatedData)
-                then(() => {
-                    // Profile updated!
+                    .then(() => {
+                        // Profile updated!
+                        navigate('/')
+                    }).catch((error) => {
+                        // An error occurred
 
-                }).catch((error) => {
-                    // An error occurred
-
-                });
+                    });
             })
             .catch(error => {
                 console.log(error);

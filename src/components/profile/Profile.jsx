@@ -28,7 +28,7 @@ const Profile = () => {
     return (
         <div className='grid grid-cols-1 md:grid-cols-2 items-center justify-center gap-8 p-4 md:px-18 mt-4 md:mt-20'>
             <div className='p-4 border-2 border-base-100 rounded-lg shadow-sm'>
-                <img className='w-64 h-64 flex mx-auto rounded-xl' src={user?.photoURL} alt="" />
+                <img className='w-64 h-64 flex mx-auto rounded-xl' src={user?.photoURL} alt="not pound" />
                 <h1 className='text-2xl mt-4 text-center  font-bold'>Name: {user.displayName ? user.displayName : "Not Availavle"}</h1>
                 <h1 className='text-lg mt-4 text-center break-words font-bold'>Email:  {user.email ? user.email : "Not Availavle"}</h1>
             </div>
