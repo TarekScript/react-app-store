@@ -3,16 +3,27 @@ import { Link } from 'react-router';
 import { AuthContext } from '../../provider/ContextProvider';
 
 const Register = () => {
-    const { registerUser, loginWithGoogle } = use(AuthContext)
+    const { registerUser, updateUserProfile, loginWithGoogle } = use(AuthContext)
     const handleRegister = (e) => {
         e.preventDefault();
         const name = e.target.name.value;
         const photo = e.target.photoUrl.value;
         const email = e.target.email.value;
         const password = e.target.password.value;
+        const updatedData = {
+            displayName: name,
+            photoURL: photo
+        }
         registerUser(email, password)
             .then(result => {
-                console.log(result);
+                updateUserProfile(updatedData)
+                then(() => {
+                    // Profile updated!
+
+                }).catch((error) => {
+                    // An error occurred
+
+                });
             })
             .catch(error => {
                 console.log(error);

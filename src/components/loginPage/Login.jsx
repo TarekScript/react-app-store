@@ -1,9 +1,9 @@
 import React, { use } from 'react';
-import { Link } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 import { AuthContext } from '../../provider/ContextProvider';
 
 const Login = () => {
-
+    const navigate = useNavigate();
     const { loginUser, loginWithGoogle } = use(AuthContext);
     const handleLogin = (e) => {
         e.preventDefault();
@@ -12,7 +12,7 @@ const Login = () => {
         (email, password);
         loginUser(email, password)
             .then(result => {
-                console.log(result);
+                navigate('/')
             })
             .catch(error => {
                 console.log(error);

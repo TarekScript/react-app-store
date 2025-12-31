@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaRegStar } from 'react-icons/fa6';
 import { useLoaderData, useParams } from 'react-router';
 import { IoIosStar } from "react-icons/io";
 
 
 const AppDetails = () => {
+    const [install, setInstall] = useState(false)
     const { id } = useParams();
     const data = useLoaderData();
     const selectedApp = data.find(app => app.id == id);
@@ -23,7 +24,11 @@ const AppDetails = () => {
             </div>
             <div className='ml-2 md:ml-12'>
                 <h2 className='font-semibold md:text-xl '>{category} | {downloads}+ Downloads | {rating} Rating</h2>
-                <button className='btn mt-4 bg-green-700 px-16 text-white'>Install</button>
+
+                {
+                    install ? <button onClick={() => setInstall(!install)} className='btn mt-4 bg-red-700 px-16 text-white'>Uninstall</button> : <button onClick={() => setInstall(!install)} className='btn mt-4 bg-green-700 px-16 text-white'>Install</button>
+                }
+
                 <hr className="border-t-2 my-4 border-gray-400 opacity-50" />
                 <h1 className='text-2xl font-bold'>Description</h1>
                 <hr className="border-t-2 my-4 border-gray-400 opacity-50" />
@@ -44,6 +49,7 @@ const AppDetails = () => {
                     </div>)}
                 </div>
             </div>
+
         </div>
     );
 };

@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router";
 import AppDetails from "../components/appDetails/AppDetails";
 import Home from "../components/home/Home";
 import Login from "../components/loginPage/Login";
+import Profile from "../components/profile/Profile";
 import Register from "../components/registerPage/Register";
 import RootPage from "../layout/RootPage";
 import ErrorPage from "../pageses/ErrorPage";
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
             {
                 path: '/register',
                 Component: Register
+            },
+            {
+                path: '/profile',
+                element: <PrivateRoute><Profile></Profile></PrivateRoute>
             }
         ]
     },
