@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { use } from 'react';
 import { Link, NavLink } from 'react-router';
 import './navBar.css';
 import logo from '../../assets/app-store_888840.png'
-
+import { AuthContext } from '../../provider/ContextProvider';
+import emptyUserImg from '../../assets/user.png'
 const NavBar = () => {
+    const { user, logoutUser } = use(AuthContext);
+    const handleLogout = () => {
+        logoutUser()
+            .than(() => {
+
+            })
+            .catch(() => {
+
+            })
+    }
     const navLi = <>
         <li className='text-lg'><NavLink to='/'>Home</NavLink></li>
         <li className='text-lg'><NavLink to='profile'>Profile</NavLink></li>
@@ -32,7 +43,12 @@ const NavBar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <Link to='/login' className="btn">Login</Link>
+                {
+                    user ? <div className='flex items-center gap-2'>
+                        <img className='w-12 h-12 rounded-full' src={user?.photoURL ? user.photoURL : emptyUserImg} alt="" />
+                        <button onClick={handleLogout} className='btn'>LogOut</button>
+                    </div> : <Link to='/login' className="btn">Login</Link>
+                }
             </div>
         </div>
     );

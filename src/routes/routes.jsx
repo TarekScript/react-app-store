@@ -6,6 +6,7 @@ import Register from "../components/registerPage/Register";
 import RootPage from "../layout/RootPage";
 import ErrorPage from "../pageses/ErrorPage";
 import Loader from "../pageses/Loader";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -22,7 +23,7 @@ const router = createBrowserRouter([
             {
                 loader: () => fetch('/data.json'),
                 path: '/appdetails/:id',
-                Component: AppDetails,
+                element: <PrivateRoute><AppDetails></AppDetails></PrivateRoute>,
                 hydrateFallbackElement: <Loader></Loader>
             },
             {
