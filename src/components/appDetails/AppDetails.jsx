@@ -1,15 +1,32 @@
-import React, { useState } from 'react';
+import React, { use, useState } from 'react';
 import { FaRegStar } from 'react-icons/fa6';
 import { useLoaderData, useParams } from 'react-router';
 import { IoIosStar } from "react-icons/io";
+import { AuthContext } from '../../provider/ContextProvider';
 
 
 const AppDetails = () => {
-    const [install, setInstall] = useState(false)
+    const [install, setInstall] = useState(false);
+    const [myReview, setMyReview] = useState()
     const { id } = useParams();
+    const { user } = use(AuthContext)
     const data = useLoaderData();
     const selectedApp = data.find(app => app.id == id);
     const { thumbnail, name, downloads, rating, category, description, features, developer, reviews, banner } = selectedApp;
+    // console.log(myReview);
+    // rating 
+    const handleRating = (e) => {
+        e.preventDefault();
+        const rating = e.target.rating.value;
+        const comment = e.target.comment.value;
+        const newReview = {
+            user: user?.displayName,
+            rating: rating,
+            comment: comment
+        }
+        setMyReview(newReview);
+    }
+
     return (
         <div>
             <img className='h-72 md:h-96 w-full' src={thumbnail} alt="" />
@@ -40,16 +57,39 @@ const AppDetails = () => {
                 </div>
                 <hr className="border-t-2 my-4 border-gray-400 opacity-50" />
                 <h3 className='text-xl font-bold flex items-center gap-2'>App Reviews   <IoIosStar className='text-yellow-600' />   {rating}({downloads}) </h3>
-                <div className='flex mt-4'>
+                <div className='flex mt-4 gap-8'>
                     {reviews.map(review => <div className='bg-gray-400 rounded-lg p-6'>
 
                         <h3 className='text-lg font-semibold flex items-center '>Top Review    (<IoIosStar className='text-yellow-600' />   {review.rating})</h3>
                         <p className='my-2'>{review.comment}</p>
                         <h3 className='text-end tex-bold'>- {review.user}</h3>
                     </div>)}
+                    {myReview && <div>
+                        <div className='bg-gray-400 rounded-lg p-6'>
+
+                            <h3 className='text-lg font-semibold flex items-center text-gray-700'>My Review    (<IoIosStar className='text-yellow-600' />   {myReview.rating})</h3>
+                            <p className='my-2'>{myReview.comment}</p>
+                            <h3 className='text-end tex-bold'>- {myReview.user}</h3>
+                        </div>
+                    </div>}
                 </div>
             </div>
-
+            <hr className="border-t-2 my-4 border-gray-400 opacity-50" />
+            {install && <div className='border-2 w-96 mx-auto mt-6 border-gray-200 shadow-sm'>
+                <h1 className='text-2xl text-center mt-4 font-bold'>Leave A Review</h1>
+                <form className='p-4 mt-2 flex flex-col space-y-2' onSubmit={handleRating}>
+                    <select name='rating' defaultValue="Please Rate Our App" className="select">
+                        <option disabled={true}>Rate(1-5)</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                    <textarea required name='comment' className="textarea" placeholder="Your Comment"></textarea>
+                    <input className='btn w-fit mx-auto' type="submit" value="Submit" />
+                </form>
+            </div>}
         </div>
     );
 };
